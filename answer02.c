@@ -79,4 +79,68 @@ char * my_strrchr(const char * str, int ch)
   return();
 }
 
+char * my_strstr(const char * haystack, const char * needle)
+{
+  while(*haystack++)
+    {
+      if(haystack[*haystack-1] == *needle[0])
+	{
+	  n_length = my_strlen(const char * needle);
+	  haystack = haystack - 1;
+	  while(*needle)
+	    {
+	      if(needle[*needle++] != haystack++)
+		{
+		  return NULL;
+		}
+	    }
+	  return needle;
+	}
+    }
+  return haystack;
+}
+
+char *my_syrcpy(char * dest, const char * src)
+{
+  while(*src)
+    {
+      dest[*dest++] = src[*src++];
+    }
+  dest[*dest] = *src;
+}
+
+char * my_strcat(char *dest, const char * src)
+{
+  if(!*dest)
+    {
+      *dest = 1;
+    }
+  while(*dest)
+    {
+      if(!*dest)
+	{
+	  while(*src)
+	    {
+	      dest[*dest++] == src[*src++];
+	      return dest;
+	    }
+	}
+      *dest++;
+    }
+  return;
+}
+
+int my_isspace(int ch);
+{
+  if((ch >= 9 && ch <= 13) || ch == 32)
+    {
+      return(1);
+    }	
+  return(0);
+}
+
+int my_atoi(const char *str);
+{
+  
+    
   
